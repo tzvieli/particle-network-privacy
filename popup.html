@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Particle Network Settings</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 16px;
+      width: 280px;
+      font-family: 'Google Sans', Arial, sans-serif;
+      background: #ffffff;
+      color: #202124;
+    }
+    h3 {
+      margin: 0 0 12px;
+      font-size: 16px;
+      font-weight: 500;
+    }
+    .control {
+      display: flex;
+      flex-direction: column;
+      margin-bottom: 16px;
+    }
+    .control label {
+      font-size: 13px;
+      color: #5f6368;
+      margin-bottom: 4px;
+    }
+    .control input[type="range"] {
+      -webkit-appearance: none;
+      height: 4px;
+      border-radius: 2px;
+      background: #e0e0e0;
+      outline: none;
+    }
+    .control input[type="range"]::-webkit-slider-thumb {
+      -webkit-appearance: none;
+      width: 14px;
+      height: 14px;
+      border-radius: 50%;
+      background: #1a73e8;
+      cursor: pointer;
+      box-shadow: 0 1px 2px rgba(0,0,0,0.2);
+    }
+    .control input[type="range"]::-moz-range-thumb {
+      width: 14px;
+      height: 14px;
+      border: none;
+      border-radius: 50%;
+      background: #1a73e8;
+      cursor: pointer;
+    }
+    .control .value {
+      font-size: 12px;
+      color: #70757a;
+      text-align: right;
+      margin-top: 2px;
+    }
+    .checkbox-label {
+      display: flex;
+      align-items: center;
+      font-size: 14px;
+      color: #202124;
+      cursor: pointer;
+      margin-bottom: 16px;
+    }
+    .checkbox-label input[type="checkbox"] {
+      width: 16px;
+      height: 16px;
+      margin-right: 8px;
+      accent-color: #1a73e8;
+      cursor: pointer;
+    }
+    button#apply {
+      width: 100%;
+      padding: 10px 0;
+      font-size: 14px;
+      font-weight: 500;
+      color: #ffffff;
+      background: #1a73e8;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      transition: background 0.2s ease;
+    }
+    button#apply:hover {
+      background: #1669c1;
+    }
+  </style>
+</head>
+<body>
+  <h3>Particle Network Settings</h3>
+
+  <div class="control">
+    <label for="count">Particles</label>
+    <input id="count" type="range" min="50" max="1000" value="300">
+    <div class="value" id="count-val">300</div>
+  </div>
+
+  <div class="control">
+    <label for="dist">Link Distance</label>
+    <input id="dist" type="range" min="20" max="300" value="120">
+    <div class="value" id="dist-val">120</div>
+  </div>
+
+  <label class="checkbox-label">
+    <input id="lines" type="checkbox" checked>
+    Show Lines
+  </label>
+
+  <button id="apply">Apply</button>
+
+  <!-- external script only -->
+  <script src="popup.js"></script>
+</body>
+</html>

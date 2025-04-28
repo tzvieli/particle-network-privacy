@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Particle Network</title>
+  <div class="search-container">
+    <!-- Tiny “G” logo -->
+    <img class="g-logo" src="https://www.google.com/favicon.ico" alt="Google">
+    
+    <form action="https://www.google.com/search" method="GET" target="_blank">
+      <input
+        type="text"
+        name="q"
+        placeholder="Search Google or type a URL"
+        autocomplete="off"
+        autofocus
+      />
+      <button type="submit" aria-label="Search">
+        <!-- inline magnifying-glass SVG -->
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+          <circle cx="10" cy="10" r="7" stroke="#5f6368" stroke-width="2" fill="none"/>
+          <line x1="15" y1="15" x2="21" y2="21" stroke="#5f6368" stroke-width="2" stroke-linecap="round"/>
+        </svg>
+      </button>
+    </form>
+  </div>
+  
+  <style>
+    html, body { margin:0; padding:0; overflow:hidden; background:#0a0a0a; }
+    
+    canvas { display:block; }
+    .search-container {
+  position: absolute;
+  top: 40%;                /* adjust vertical position as you like */
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 10;             /* above the particles */
+  display: flex;
+  align-items: center;
+  font-family: Arial, sans-serif;
+}
+
+.search-container .g-logo {
+  width: 24px;
+  height: 24px;
+  margin-right: 8px;
+}
+
+.search-container form {
+  position: relative;
+}
+
+.search-container input {
+  width: 600px;
+  height: 44px;
+  padding: 0 16px;
+  padding-right: 52px;     /* space for the button */
+  border: 1px solid #dfe1e5;
+  border-radius: 24px;
+  box-shadow: 0 1px 6px rgba(32,33,36,0.28);
+  font-size: 16px;
+  color: #202124;
+  outline: none;
+}
+
+.search-container input::placeholder {
+  color: #80868b;
+}
+
+.search-container button {
+  position: absolute;
+  right: 4px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 36px;
+  height: 36px;
+  border: none;
+  background: none;
+  padding: 0;
+  cursor: pointer;
+}
+
+.search-container button svg {
+  width: 20px;
+  height: 20px;
+}
+
+  </style>
+</head>
+<body>
+  <canvas id="particleCanvas"></canvas>
+  <!-- external script only -->
+  <script src="newtab.js"></script>
+</body>
+</html>

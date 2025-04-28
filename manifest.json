@@ -1,0 +1,25 @@
+{
+  "manifest_version": 3,
+  "name": "Particle Network New Tab",
+  "version": "1.0",
+  "description": "A particle‐network background with adjustable settings",
+  
+  "chrome_url_overrides": {
+    "newtab": "newtab.html"
+  },
+  
+
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": {
+      "16": "download.png",
+      "48": "download.png",
+      "128": "download.png"
+    }
+  },
+
+
+  "permissions": [
+    "storage"
+  ]
+}
